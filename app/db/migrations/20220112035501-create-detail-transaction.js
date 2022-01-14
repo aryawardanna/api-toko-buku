@@ -6,40 +6,40 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       transaction: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
       },
       user: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       book: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       titleBook: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       imageBook: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       priceBook: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       quantity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('DetailTransactions');
-  }
+  },
 };
