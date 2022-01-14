@@ -4,7 +4,7 @@ const { Book, Category } = require('../../db/models');
 module.exports = {
   getAllBooks: async (req, res, next) => {
     try {
-      const { keyword = '' } = req.query;
+      const { keyword = '', category = '' } = req.query;
       console.log(keyword);
 
       let condition = {
@@ -13,6 +13,10 @@ module.exports = {
 
       if (keyword !== '') {
         condition = { ...condition, title: { [Op.like]: `%${keyword}%` } };
+      }
+
+      if (category !== '') {
+        condition = { ...condition, category: category };
       }
       const books = await Book.findAll({
         where: condition,
