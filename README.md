@@ -29,7 +29,7 @@ git clone https://github.com/aryawardanna/api-toko-buku/
 Switch to the repo folder :
 
 ```
-cd be-book-cashier
+cd api-toko-buku
 ```
 
 Install all the dependencies using `npm` or you can using `yarn` :
